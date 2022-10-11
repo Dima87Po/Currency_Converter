@@ -1,0 +1,10 @@
+<app-header 
+  [rates]="rates$ | async" 
+  [currenciesToDisplay]="currenciesToDisplay">
+</app-header>
+
+<app-converter 
+  [currencies]="currenciesToConvert"
+  [rate]="rate"
+  (currencyChanged)="loadRate($event)">
+</app-converter>
